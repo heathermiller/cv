@@ -123,6 +123,7 @@
 %% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
 \newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
 
+\newcommand{\dates}[1]{\hfill \emph{#1}}
 
 %% custom ampersand (font consistent with the one chosen above)
 \newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
@@ -164,7 +165,7 @@
   \flushright \footnotesize Phone: \myphone \\
   Fax: \myfax  \\
   {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
-  {\scriptsize  \texttt{\href{\myweb}{\myweb}}}
+  {\scriptsize  \vspace{-0.03in} \texttt{\href{\myweb}{\myweb}}}
 \end{minipage}
 
 
@@ -194,9 +195,11 @@
 %% Appointments
 \marginhead{Education}
 
-\noindent{\bf \em EPFL}, \emph{Lausanne, Switzerland} \vspace{0.01in}
+\noindent{\bf \em EPFL}, \emph{Lausanne, Switzerland} \vspace{0.01in}  \dates{2009 -- Present}
 
-\ind 2009--Present. Ph.D. student in Computer Science.
+\ind Ph.D. in Computer Science.
+
+\ind Advisor: \ind Martin Odersky \dates{2011 -- Present}
 
 % \ind 2008--2009. Visiting Associate Professor of Sociology.
 
