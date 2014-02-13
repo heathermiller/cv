@@ -74,6 +74,7 @@
 %%%------------------------------------------------------------------------
 
 \usepackage{url,fancyhdr}
+\usepackage[ampersand]{easylist}
 %%\usepackage{revnum} % for reverse-numbered publications (revnumerate environment) if needed.
 
 %% needed for xelatex to work
@@ -189,7 +190,7 @@
 %% Research Interests
 \marginhead{Research \newline Interests}
 
-\noindent Programming language design and implementation for distributed programming. I'm interested in using type systems to facilitate the design of new, functional distributed systems.
+\noindent Programming language and library design; language support for concurrency and distribution; type systems; reactive programming
 
 \bigskip
 
@@ -304,7 +305,15 @@
 \noindent {\bf Lead Teaching Assistant}, {\em Functional Programming Principles in Scala} \dates{2012 -- 2014}
 \newline\noindent Popular Coursera MOOC on functional programming in Scala,
 \newline\noindent with >100,000 participants to date
-% \newline\noindent {\em Led the development of all aspects of the MOOC}
+\begin{easylist}[itemize]
+& Lead TA organizing a team of graduate students, editing lecture 
+\newline videos, managing content production, designed course exercises 
+\newline with cloud-hosted grading, etc
+
+& Created extensive course evaluations with interactive 
+\newline visualizations; an experience report has been accepted 
+\newline for publication at ICSE'14
+\end{easylist}
 \bigskip
 
 \noindent {\bf Instructor}, {\em Scala as a Research Tool} \dates{2013}
@@ -325,12 +334,28 @@
 \marginhead{Open Source}
 
 \noindent {\bf Scala Programming Language}, {\em member of the Scala team} \dates{2011 --}
-\newline\ind Scala Documentation Czar
-\newline\ind Futures and Promises Library
-\newline\ind Scala Pickling
-% \begin{itemize}
-% \item Scala Documentation Czar
-% \end{itemize}
+
+\vspace{0.05in}
+\begin{easylist}[itemize]
+& \href{http://docs.scala-lang.org/sips/pending/spores.html}{{\bf Scala Spores} (Scala Improvement Proposal SIP-21)}, {\bf \em project lead}
+\newline novel type-based abstraction for using closures safely 
+\newline in concurrent and distributed environment
+
+& \href{http://lampwww.epfl.ch/~hmiller/pickling/}{{\bf Scala Pickling}}, {\bf \em project lead}
+\newline novel framework for fast, boilerplate-free, extensible serialization 
+
+& \href{http://docs.scala-lang.org/sips/completed/futures-promises.html}{{\bf Scala Futures and Promises} (Scala Improvement Proposal SIP-14)}, {\bf \em team member}
+\newline unified non-blocking concurrency substrate for 
+\newline Scala, Akka, Play, and others
+
+& \href{http://docs.scala-lang.org/}{{\bf Scala Documentation}}, {\bf \em creator, lead maintainer}
+\newline a central website for community-driven documentation for
+\newline the Scala programming language and core libraries
+
+& \href{https://wiki.scala-lang.org/display/SW/Scaladoc}{{\bf Scaladoc}}, {\bf \em co-maintainer}
+\newline documentation tool for Scala's official API documentation
+
+\end{easylist}
 
 \bigskip
 
