@@ -66,8 +66,8 @@
 
 %% If you don't use git or the vc package (from CTAN), comment this out.
 %% If you comment it out, be sure to remove the \rfoot comment below, too.
-\immediate\write18{sh ./vc}
-\input{vc}
+% \immediate\write18{sh ./vc}
+% \input{vc}
 
 %%%------------------------------------------------------------------------
 %%% Required style files
@@ -75,6 +75,8 @@
 
 \usepackage{url,fancyhdr}
 \usepackage[ampersand]{easylist}
+\usepackage[total={5.3in,8.75in},top=1.2in, left=1.5in]{geometry}
+\usepackage{morefloats}
 %%\usepackage{revnum} % for reverse-numbered publications (revnumerate environment) if needed.
 
 %% needed for xelatex to work
@@ -113,6 +115,7 @@
 \setsansfont[Mapping=tex-text,Colour=AA0000]{Myriad Pro}
 \setmonofont[Mapping=tex-text,Scale=0.9]{Inconsolata}
 
+\addtolength{\marginparwidth}{10pt}
 
 %%%------------------------------------------------------------------------
 %%% Local commands
@@ -123,9 +126,9 @@
 %% \vspace element to keep the marginal header pleasingly aligned with the first
 %% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or
 %% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
-\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
+\newcommand{\marginhead}[1]{\reversemarginpar\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
 
-\newcommand{\dates}[1]{\hfill \emph{#1}}
+\newcommand{\dates}[1]{\normalmarginpar\marginpar{\hfill \emph{#1}}}
 
 %% custom ampersand (font consistent with the one chosen above)
 \newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
@@ -149,7 +152,7 @@
 \rhead{{\scriptsize\thepage}}
 
 %% git revision control footer
-\rfoot{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
+% \rfoot{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
 
 %%%------------------------------------------------------------------------
 %%% Address and contact block
@@ -175,15 +178,6 @@
 
 %% Name
 \noindent{\Large {\textsc{heather miller}}}
-\reversemarginpar
-
-\medskip
-
-%% Research Interests
-\medskip
-\marginhead{Citizenship}
-
-\noindent USA
 
 \bigskip
 
@@ -200,11 +194,11 @@
 \noindent{\bf \em EPFL}, \emph{Lausanne, Switzerland} \vspace{0.01in} \dates{2009 --}
 \newline Ph.D. in Computer Science
 \newline Advisor: Martin Odersky \dates{2011 --}
-\bigskip
+\medskip
 
 \noindent{\bf \em University of Miami}, \emph{Coral Gables, FL} \vspace{0.01in}  \dates{2006 -- 2009}
 \newline\noindent BSEE in Electrical Engineering, Audio Engineering, {\em with honors, May 2009}
-\bigskip
+\medskip
 
 \noindent{\bf \em Cooper Union for the Advancement of Science and Art}, \emph{New York, NY} \vspace{0.01in}  \dates{2004 -- 2006}
 \bigskip
@@ -212,9 +206,8 @@
 %% Service
 \marginhead{Academic \newline Service}
 
-\vspace{0.05in}
-\noindent{\bf \em Committees}: Scala 2014 (co-chair), Scala 2013 (co-chair)
-\newline\noindent{\bf \em Reviewer} for: ECOOP 2013, Scala 2013
+\noindent{\bf Committees}: Scala 2014 (co-chair), Scala 2013 (co-chair)
+\newline\noindent{\bf Reviewer} for: ECOOP 2013, Scala 2013
 
 \bigskip
 
@@ -227,50 +220,34 @@
 %% \renewcommand{\labelenumi}{\textsc{a}\theenumi.}
 %% \begin{revnumerate}
 
-\noindent\href{http://infoscience.epfl.ch/record/190022}{\bf Functional Programming For All! Scaling a MOOC for Students}\dates{ICSE 2014}\vspace{-0.03in}
-\newline\noindent\href{http://infoscience.epfl.ch/record/190022}{\bf And Professionals Alike}
-% \smallskip
+\noindent\href{http://infoscience.epfl.ch/record/190022}{\bf Functional Programming For All! Scaling a MOOC for Students and Professionals Alike}\dates{ICSE 2014}
 \newline\noindent Heather Miller, Philipp Haller, Lukas Rytz, Martin Odersky
 \newline\noindent\emph{ACM SIGSOFT International Conference on Software Engineering}
-\bigskip
+\medskip
 
 \noindent\href{http://infoscience.epfl.ch/record/188383}{\bf RAY: Integrating Rx and Async for Direct-Style Reactive Streams}\dates{REM 2013}
-% \smallskip
 \newline\noindent Philipp Haller, Heather Miller
 \newline\noindent\emph{Workshop on Reactivity, Events and Modularity}
-\bigskip
+\medskip
 
-\noindent\href{http://infoscience.epfl.ch/record/188383}{\bf Instant Pickles: Generating Object-Oriented Pickler}\dates{OOPSLA 2013}\vspace{-0.03in}
-\newline\noindent\href{http://infoscience.epfl.ch/record/188383}{\bf Combinators for Fast and Extensible Serialization}
-% \smallskip
+\noindent\href{http://infoscience.epfl.ch/record/188383}{\bf Instant Pickles: Generating Object-Oriented Pickler Combinators for Fast}\dates{OOPSLA 2013}\vspace{-0.03in}
+\newline\noindent\href{http://infoscience.epfl.ch/record/188383}{\bf and Extensible Serialization}
 \newline\noindent Heather Miller, Philipp Haller, Eugene Burmako, Martin Odersky
 \newline\noindent\emph{ACM SIGPLAN Conference on Object Oriented Programming, Systems,}
 \newline\noindent\emph{Languages and Applications}
-\bigskip
+\medskip
 
 
-\noindent\href{http://infoscience.epfl.ch/record/180265}{\bf FlowPools: A Lock-Free Deterministic Concurrent}\dates{LCPC 2012}\vspace{-0.03in}
-\newline\noindent\href{http://infoscience.epfl.ch/record/180265}{\bf Dataflow Abstraction}
-% \smallskip
-\newline\noindent Aleksandar Prokopec, Heather Miller, Tobias Schlatter,
-\newline\noindent Philipp Haller, Martin Odersky
+\noindent\href{http://infoscience.epfl.ch/record/180265}{\bf FlowPools: A Lock-Free Deterministic Concurrent Dataflow Abstraction}\dates{LCPC 2012}
+\newline\noindent Aleksandar Prokopec, Heather Miller, Tobias Schlatter, Philipp Haller, Martin Odersky
 \newline\noindent\emph{International Workshop on Languages and Compilers for Parallel Computing}
-\vspace{0.03in}
-\newline\noindent {\small Invited to Revised Selected Papers on the 25th International Workshop on}
-\vspace{-0.03in}
-\newline\noindent {\small Languages and Compilers for Parallel Computing, Lecture Notes in Computer}
-\vspace{-0.03in}
-\newline\noindent {\small Science, Vol. 7760, 2013}
-\bigskip
-
-\pagebreak
+\medskip
 
 \noindent\href{http://infoscience.epfl.ch/record/170032}{\bf Tools and Frameworks for Big Learning in Scala: Leveraging the}\dates{BigLearn 2011}\vspace{-0.03in}
 \newline\noindent\href{http://infoscience.epfl.ch/record/170032}{\bf Language for High Productivity and Performance}
-% \smallskip
 \newline\noindent Heather Miller, Philipp Haller, Martin Odersky
 \newline\noindent\emph{NIPS Workshop on Parallel and Large-Scale Machine Learning}
-\bigskip
+\medskip
 
 \noindent\href{http://infoscience.epfl.ch/record/165111}{\bf Parallelizing Machine Learning -- Functionally: A Framework}\dates{Scala 2011}\vspace{-0.03in}
 \newline\noindent\href{http://infoscience.epfl.ch/record/165111}{\bf and Abstractions for Parallel Graph Processing}
@@ -278,8 +255,6 @@
 \newline\noindent Philipp Haller, Heather Miller
 \newline\noindent\emph{Scala Workshop}
 \bigskip
-
-% \bigskip
 
 %% Awards
 \medskip
@@ -308,29 +283,24 @@
 \newline\noindent with >100,000 participants to date
 \vspace{0.05in}
 \begin{easylist}[itemize]
-& Lead TA organizing a team of graduate students, editing lecture 
-\newline videos, managing content production, designed course exercises 
-\newline with cloud-hosted grading, etc
+& Lead TA organizing a team of graduate students, editing lecture videos, managing content production, designed course exercises with cloud-hosted grading, etc
 
-& Created extensive course evaluations with interactive 
-\newline visualizations; led to a publication at ICSE'14
+& Created extensive course evaluations with interactive visualizations; led to a publication at ICSE'14
 \end{easylist}
-\bigskip
+\medskip
 
 \noindent {\bf Instructor}, {\em Scala as a Research Tool} \dates{2013}
 \newline\noindent ECOOP Tutorial
-\bigskip
+\medskip
 
 \noindent {\bf Lead Teaching Assistant}, {\em Programming Principles} \dates{2012}
 \newline\noindent EPFL Undergraduate course on functional and logic programming
-\bigskip
+\medskip
 
 \noindent {\bf Teaching Assistant}, {\em Programming Principles} \dates{2011}
 \newline\noindent EPFL Undergraduate course on functional and logic programming
 
 \bigskip
-
-\pagebreak
 
 %% Open Source
 \medskip
@@ -341,19 +311,16 @@
 \vspace{0.05in}
 \begin{easylist}[itemize]
 & \href{http://docs.scala-lang.org/sips/pending/spores.html}{{\bf Scala Spores} (Scala Improvement Proposal SIP-21)}, {\bf \em project lead}
-\newline novel type-based abstraction for using closures safely 
-\newline in concurrent and distributed environments
+\newline novel type-based abstraction for using closures safely in concurrent and distributed settings
 
 & \href{http://lampwww.epfl.ch/~hmiller/pickling/}{{\bf Scala Pickling}}, {\bf \em project lead}
 \newline novel framework for fast, boilerplate-free, extensible serialization 
 
 & \href{http://docs.scala-lang.org/sips/completed/futures-promises.html}{{\bf Scala Futures and Promises} (Scala Improvement Proposal SIP-14)}, {\bf \em team member}
-\newline unified non-blocking concurrency substrate for 
-\newline Scala, Akka, Play, and others
+\newline unified non-blocking concurrency substrate for Scala, Akka, Play, and others
 
 & \href{http://docs.scala-lang.org/}{{\bf Scala Documentation}}, {\bf \em creator, writer, lead maintainer}
-\newline a central website for community-driven documentation for
-\newline the Scala programming language and core libraries
+\newline a central website for community-driven documentation for the Scala programming language and core libraries
 
 & \href{https://wiki.scala-lang.org/display/SW/Scaladoc}{{\bf Scaladoc}}, {\bf \em co-maintainer}
 \newline documentation tool for Scala's official API documentation
@@ -366,121 +333,59 @@
 \medskip
 \marginhead{Selected Talks}
 
-\noindent{\bf Academese to English: Scala's Type System, Dependent Types} \dates{NEScala 2014}\vspace{-0.03in}
-\linebreak\noindent{\bf and What It Means To You}\dates{}
-\linebreak\noindent New York, NY, USA. March 1, 2014
-\bigskip
+\noindent {\bf Academese to English: Scala's Type System, Dependent Types and What It Means To You} \dates{NEScala 2014}
+\noindent\linebreak New York, NY, USA. March 1, 2014
+\medskip
 
-\noindent\href{https://speakerdeck.com/heathermiller/instant-pickles-generating-object-oriented-pickler-combinators-for-fast-and-extensible-serialization}{\bf Instant Pickles: Generating Object-Oriented Pickler} \dates{OOPSLA 2013}\vspace{-0.03in}
-\linebreak\noindent\href{https://speakerdeck.com/heathermiller/instant-pickles-generating-object-oriented-pickler-combinators-for-fast-and-extensible-serialization}{\bf Combinators for Fast and Extensible Serialization}\dates{}
-\linebreak\noindent Indianapolis, IN, USA. October 30, 2013
-\bigskip
+\noindent\raggedright \href{https://speakerdeck.com/heathermiller/instant-pickles-generating-object-oriented-pickler-combinators-for-fast-and-extensible-serialization}{\bf Instant Pickles: Generating Object-Oriented Pickler Combinators for Fast} \dates{OOPSLA 2013}\vspace{-0.03in}
+\noindent\linebreak\raggedright \href{https://speakerdeck.com/heathermiller/instant-pickles-generating-object-oriented-pickler-combinators-for-fast-and-extensible-serialization}{\bf and Extensible Serialization}\dates{}
+\noindent\linebreak Indianapolis, IN, USA. October 30, 2013
+\medskip
 
-\noindent\href{http://heather.miller.am/files/IU-PL-Abstractions-for-Dist-Programming.pdf}{\bf PL Abstractions for Distributed Programming:} \dates{Indiana University {\bf \em (invited)}}\vspace{-0.03in}
-\linebreak\noindent\href{http://heather.miller.am/files/IU-PL-Abstractions-for-Dist-Programming.pdf}{\bf Pickle Your Spores!}\dates{}
+\noindent\href{http://heather.miller.am/files/IU-PL-Abstractions-for-Dist-Programming.pdf}{\bf PL Abstractions for Distributed Programming: Pickle Your Spores!} \dates{Indiana University \newline\mbox{}~\hfill {\bf \em (invited)}}
 \linebreak\noindent Bloomington, IN, USA. October 25, 2013
 \bigskip
 
 
 \noindent\href{https://speakerdeck.com/heathermiller/spores-distributable-functions-in-scala}{\bf Spores: Distributable Functions in Scala} \dates{Strange Loop 2013}
-\linebreak\noindent St. Louis, MO, USA. September 19, 2013
-\bigskip
+\noindent\linebreak St. Louis, MO, USA. September 19, 2013
+\medskip
 
-\noindent\href{http://heather.miller.am/files/LaME2013-Dataflow.pdf}{\bf Open Issues in Dataflow Programming} \dates{LaME 2013 {\bf \em (invited)}}
+\noindent\href{http://heather.miller.am/files/LaME2013-Dataflow.pdf}{\bf Open Issues in Dataflow Programming} \dates{LaME 2013 \newline\mbox{}~\hfill {\bf \em (invited)}}
 \linebreak\noindent Montpellier, France. July 1, 2013
-\bigskip
+\medskip
 
-\noindent{\bf Scala as a Research Tool} \dates{ECOOP 2013 Tutorial}
+\noindent{\bf Scala as a Research Tool} \dates{ECOOP 2013 \newline\mbox{}~\hfill Tutorial}
 \linebreak\noindent Montpellier, France. July 1, 2013
-\bigskip
+\medskip
 
-\noindent\href{https://speakerdeck.com/heathermiller/on-pickles-and-spores-improving-support-for-distributed-programming-in-scala}{\bf On Pickles \& Spores: Improving Scala's Support} \dates{ScalaDays 2013}\vspace{-0.03in}
-\linebreak\noindent\href{https://speakerdeck.com/heathermiller/on-pickles-and-spores-improving-support-for-distributed-programming-in-scala}{\bf for Distributed Programming}\dates{}
-\linebreak\noindent New York, NY, USA. June 12, 2013
-\bigskip
+\noindent\href{https://speakerdeck.com/heathermiller/on-pickles-and-spores-improving-support-for-distributed-programming-in-scala}{\bf On Pickles \& Spores: Improving Scala's Support for Distributed Programming} \dates{ScalaDays 2013}\vspace{-0.03in}
+\noindent\linebreak New York, NY, USA. June 12, 2013
+\medskip
 
-\noindent\href{http://lampwww.epfl.ch/~hmiller/files/Futures-Try-PhillyETE.pdf}{\bf Futures \& Promises in Scala 2.10} \dates{PhillyETE 2013 {\bf \em (invited)}}
+\noindent\href{http://lampwww.epfl.ch/~hmiller/files/Futures-Try-PhillyETE.pdf}{\bf Futures \& Promises in Scala 2.10} \dates{PhillyETE 2013 \newline\mbox{}~\hfill {\bf \em (invited)}}
 \linebreak\noindent Philadelphia, PA, USA. April 2, 2013
 \bigskip
-
-\pagebreak
 
 %% Selected Broader Service
 \medskip
 \marginhead{Selected \newline Broader \newline Service}
 
 \noindent \href{http://ic.epfl.ch/conseil-de-faculte}{\bf EPFL Computer Science Faculty Council}, {\bf \em PhD Student Representative} \dates{2012 --}
-\newline\noindent Members include the dean of the college as well as representatives 
-\newline\noindent from every branch of the college, administrative, PhD, faculty, etc.
-\newline\noindent Quarterly meetings to steer the college and introduce new initiatives.
-\bigskip
+\newline\noindent Members include the dean of the college as well as representatives from every branch of the college, administrative, PhD, faculty, etc Quarterly meetings to steer the college and introduce new initiatives.
+\medskip
 
 \noindent \href{http://ic-gsa.epfl.ch/}{\bf EPFL CS Graduate Student Association}, {\bf \em President} \dates{2009 -- 2011}
-\newline\noindent Volunteer student organization with a mission to foster a sense of
-\newline\noindent community and collaboration between different research groups in
-\newline\noindent the college. Initiatives lead/introduced:
+\newline\noindent Volunteer student organization with a mission to foster a sense of community and collaboration between different research groups in the college. Initiatives led/introduced:
 \vspace{0.05in}
 \begin{easylist}[itemize]
 & {\bf Research Day}: college-wide showcase of labs' research activities
 & {\bf PhD Student Open House}: main recruiting event for CS doctoral program
 & {\bf Social Events}: aper\'{o}s, ski trips, outings
 \end{easylist}
-\bigskip
+\medskip
 
 \noindent {\bf EPFL CS Graduate Student Mentor} \dates{2010 -- 2012}
-\newline\noindent One-on-one mentoring of incoming doctoral students, aided students in
-\newline\noindent integrating into EPFL's research environment and Switzerland as a whole.
-\vspace{0.05in}
-\bigskip
-
-%% Selected Broader Service
-\medskip
-\marginhead{Students \newline Supervised}
-
-\noindent {\bf Louis Bliss}, {\em Incremental Picklers for Scala Pickling} \dates{9/2013 -- 1/2014} 
-\newline\noindent M.Sc. Level, co-supervision with Philipp Haller
-\medskip
-
-\noindent {\bf Thadd\'{e}e Yann Tyl}, {\em Learning Scala Style} \dates{2/2013 -- 6/2013} 
-\newline\noindent M.Sc. thesis
-\medskip
-
-\noindent {\bf Tobias Schlatter}, {\em FlowSeqs: Barrier-Free ParSeqs} \dates{9/2012 -- 1/2013} 
-\newline\noindent M.Sc. level, co-supervision w/ Philipp Haller \& Aleksandar Prokopec
-\medskip
-
-\noindent {\bf Tobias Schlatter}, {\em Multi-Lane FlowPools} \dates{2/2012 -- 6/2012} 
-\newline\noindent M.Sc. level, co-supervision w/ Philipp Haller \& Aleksandar Prokopec
-\medskip
-
-\noindent {\bf Pierre Grydbeck}, {\em Parallel Machine Learning: An Expectation} \dates{2/2012 -- 6/2012} 
-\newline\noindent {\em Maximization Algorithm for Gaussian Mixture Models}
-\newline\noindent M.Sc. level, co-supervision with Philipp Haller
-\medskip
-
-\noindent {\bf Bruno Studer}, {\em Parallel Machine Learning: Collaborative Filtering} \dates{2/2012 -- 6/2012} 
-\newline\noindent {\em via Alternating Least Squares}
-\newline\noindent B.Sc. level, co-supervision with Philipp Haller
-\medskip
-
-\noindent {\bf Stanislav Peshterliev}, {\em Parallel Natural Language Processing} \dates{9/2011 -- 1/2012} 
-\newline\noindent {\em Algorithms in Scala}
-\newline\noindent M.Sc. level, co-supervision with Philipp Haller
-\medskip
-
-\noindent {\bf Olivier Blanvillain \& Louis Bliss}, {\em Parallelization of a Collaborative} \dates{9/2011 -- 1/2012} 
-\newline\noindent {\em Filtering Algorithm with Menthor}
-\newline\noindent B.Sc. level, co-supervision with Philipp Haller
-\medskip
-
-\noindent {\bf Florian Gysin}, {\em Improving Parallel Graph Processing Through} \dates{9/2011 -- 1/2012} 
-\newline\noindent {\em the Introduction of Parallel Collections}
-\newline\noindent M.Sc. level, co-supervision with Philipp Haller
-\medskip
-
-\noindent {\bf Florian Gysin}, {\em Extending the Menthor Framework for Parallel} \dates{2/2011 -- 6/2011} 
-\newline\noindent {\em Graph Processing to Distributed Computing}
-\newline\noindent M.Sc. level, co-supervision with Philipp Haller
-\medskip
+\newline\noindent One-on-one mentoring of incoming doctoral students, aided students in integrating into EPFL's research environment and Switzerland as a whole.
 
 \end{document}
