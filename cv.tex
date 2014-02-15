@@ -126,7 +126,7 @@
 %% \vspace element to keep the marginal header pleasingly aligned with the first
 %% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or
 %% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
-\newcommand{\marginhead}[1]{\reversemarginpar\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
+\newcommand{\marginhead}[1]{\reversemarginpar\marginpar{\textsf{{\small\vspace{-1em}\flushright #1}}}}
 
 \newcommand{\dates}[1]{\normalmarginpar\marginpar{\hfill \emph{#1}}}
 
@@ -200,16 +200,8 @@
 \newline\noindent BSEE in Electrical Engineering, Audio Engineering, {\em with honors, May 2009}
 \medskip
 
-\noindent{\bf \em Cooper Union for the Advancement of Science and Art}, \emph{New York, NY} \vspace{0.01in}  \dates{2004 -- 2006}
-\bigskip
-
-%% Service
-\marginhead{Academic \newline Service}
-
-\noindent{\bf Committees}: Scala 2014 (co-chair), Scala 2013 (co-chair)
-\newline\noindent{\bf Reviewer} for: ECOOP 2013, Scala 2013
-
-\bigskip
+% \noindent{\bf \em Cooper Union for the Advancement of Science and Art}, \emph{New York, NY} \vspace{0.01in}  \dates{2004 -- 2006}
+% \bigskip
 
 %% Publications
 \marginhead{{\vskip 0.3em}Publications}
@@ -256,6 +248,14 @@
 \newline\noindent\emph{Scala Workshop}
 \bigskip
 
+%% Service
+\marginhead{Academic \newline Service}
+
+\noindent{\bf Committees}: Scala 2014 (co-chair), Scala 2013 (co-chair)
+\newline\noindent{\bf Reviewer} for: ECOOP 2013, Scala 2013
+
+\bigskip
+
 %% Selected Broader Service
 \medskip
 \marginhead{Selected \newline Broader \newline Service}
@@ -278,6 +278,7 @@
 \noindent {\bf EPFL CS Graduate Student Mentor} \dates{2010 -- 2012}
 \newline\noindent One-on-one mentoring of incoming doctoral students, aided students in integrating into EPFL's research environment and Switzerland as a whole.
 
+% \bigskip
 
 %% Teaching Experience
 \medskip
