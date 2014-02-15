@@ -123,7 +123,7 @@
 %% \vspace element to keep the marginal header pleasingly aligned with the first
 %% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or
 %% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
-\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright #1}}}}
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\normalsize\vspace{-1em}\flushright #1}}}}
 
 \newcommand{\dates}[1]{\hfill \emph{#1}}
 
@@ -174,7 +174,7 @@
 \medskip
 
 %% Name
-\noindent{\Large {\textsc{heather miller}}}
+\noindent{\huge {\textsc{heather miller}}}
 \reversemarginpar
 
 \medskip
@@ -212,7 +212,7 @@
 %% Service
 \marginhead{Academic \newline Service}
 
-\vspace{0.05in}
+\vspace{-0.02in}
 \noindent{\bf Committees}: Scala 2014 (co-chair), Scala 2013 (co-chair)
 \newline\noindent{\bf Reviewer} for: ECOOP 2013, Scala 2013
 
@@ -220,7 +220,7 @@
 
 %% Publications
 \marginhead{{\vskip 0.3em}Publications}
-\medskip
+% \medskip
 
 %% Use revnumerate environment if numbered publications are needed.
 %% (Include it above in the preamble).
@@ -308,11 +308,11 @@
 \newline\noindent with >100,000 participants to date
 \vspace{0.05in}
 \begin{easylist}[itemize]
-& Lead TA organizing a team of graduate students, editing lecture 
-\newline videos, managing content production, designed course exercises 
+& Lead TA organizing a team of graduate students, editing lecture
+\newline videos, managing content production, designed course exercises
 \newline with cloud-hosted grading, etc
 
-& Created extensive course evaluations with interactive 
+& Created extensive course evaluations with interactive
 \newline visualizations; led to a publication at ICSE'14
 \end{easylist}
 \bigskip
@@ -336,19 +336,20 @@
 \medskip
 \marginhead{Open Source}
 
+\vspace{0.01in}
 \noindent {\bf Scala Programming Language}, {\em member of the Scala team} \dates{2011 --}
 
 \vspace{0.05in}
 \begin{easylist}[itemize]
 & \href{http://docs.scala-lang.org/sips/pending/spores.html}{{\bf Scala Spores} (Scala Improvement Proposal SIP-21)}, {\bf \em project lead}
-\newline novel type-based abstraction for using closures safely 
+\newline novel type-based abstraction for using closures safely
 \newline in concurrent and distributed environments
 
 & \href{http://lampwww.epfl.ch/~hmiller/pickling/}{{\bf Scala Pickling}}, {\bf \em project lead}
-\newline novel framework for fast, boilerplate-free, extensible serialization 
+\newline novel framework for fast, boilerplate-free, extensible serialization
 
 & \href{http://docs.scala-lang.org/sips/completed/futures-promises.html}{{\bf Scala Futures and Promises} (Scala Improvement Proposal SIP-14)}, {\bf \em team member}
-\newline unified non-blocking concurrency substrate for 
+\newline unified non-blocking concurrency substrate for
 \newline Scala, Akka, Play, and others
 
 & \href{http://docs.scala-lang.org/}{{\bf Scala Documentation}}, {\bf \em creator, writer, lead maintainer}
@@ -366,6 +367,7 @@
 \medskip
 \marginhead{Selected Talks}
 
+\vspace{-0.02in}
 \noindent{\bf Academese to English: Scala's Type System, Dependent Types} \dates{NEScala 2014}\vspace{-0.03in}
 \linebreak\noindent{\bf and What It Means To You}\dates{}
 \linebreak\noindent New York, NY, USA. March 1, 2014
@@ -407,10 +409,10 @@
 
 %% Selected Broader Service
 \medskip
-\marginhead{Selected \newline Broader \newline Service}
+\marginhead{Selected \newline Broader \newline Impacts}
 
 \noindent \href{http://ic.epfl.ch/conseil-de-faculte}{\bf EPFL Computer Science Faculty Council}, {\bf \em PhD Student Representative} \dates{2012 --}
-\newline\noindent Members include the dean of the college as well as representatives 
+\newline\noindent Members include the dean of the college as well as representatives
 \newline\noindent from every branch of the college, administrative, PhD, faculty, etc.
 \newline\noindent Quarterly meetings to steer the college and introduce new initiatives.
 \bigskip
@@ -418,7 +420,7 @@
 \noindent \href{http://ic-gsa.epfl.ch/}{\bf EPFL CS Graduate Student Association}, {\bf \em President} \dates{2009 -- 2011}
 \newline\noindent Volunteer student organization with a mission to foster a sense of
 \newline\noindent community and collaboration between different research groups in
-\newline\noindent the college. Initiatives lead/introduced:
+\newline\noindent the college. Initiatives led/introduced:
 \vspace{0.05in}
 \begin{easylist}[itemize]
 & {\bf Research Day}: college-wide showcase of labs' research activities
@@ -437,48 +439,48 @@
 \medskip
 \marginhead{Students \newline Supervised}
 
-\noindent {\bf Louis Bliss}, {\em Incremental Picklers for Scala Pickling} \dates{9/2013 -- 1/2014} 
+\noindent {\bf Louis Bliss}, {\em Incremental Picklers for Scala Pickling} \dates{9/2013 -- 1/2014}
 \newline\noindent M.Sc. Level, co-supervision with Philipp Haller
 \medskip
 
-\noindent {\bf Thadd\'{e}e Yann Tyl}, {\em Learning Scala Style} \dates{2/2013 -- 6/2013} 
+\noindent {\bf Thadd\'{e}e Yann Tyl}, {\em Learning Scala Style} \dates{2/2013 -- 6/2013}
 \newline\noindent M.Sc. thesis
 \medskip
 
-\noindent {\bf Tobias Schlatter}, {\em FlowSeqs: Barrier-Free ParSeqs} \dates{9/2012 -- 1/2013} 
+\noindent {\bf Tobias Schlatter}, {\em FlowSeqs: Barrier-Free ParSeqs} \dates{9/2012 -- 1/2013}
 \newline\noindent M.Sc. level, co-supervision w/ Philipp Haller \& Aleksandar Prokopec
 \medskip
 
-\noindent {\bf Tobias Schlatter}, {\em Multi-Lane FlowPools} \dates{2/2012 -- 6/2012} 
+\noindent {\bf Tobias Schlatter}, {\em Multi-Lane FlowPools} \dates{2/2012 -- 6/2012}
 \newline\noindent M.Sc. level, co-supervision w/ Philipp Haller \& Aleksandar Prokopec
 \medskip
 
-\noindent {\bf Pierre Grydbeck}, {\em Parallel Machine Learning: An Expectation} \dates{2/2012 -- 6/2012} 
+\noindent {\bf Pierre Grydbeck}, {\em Parallel Machine Learning: An Expectation} \dates{2/2012 -- 6/2012}
 \newline\noindent {\em Maximization Algorithm for Gaussian Mixture Models}
 \newline\noindent M.Sc. level, co-supervision with Philipp Haller
 \medskip
 
-\noindent {\bf Bruno Studer}, {\em Parallel Machine Learning: Collaborative Filtering} \dates{2/2012 -- 6/2012} 
+\noindent {\bf Bruno Studer}, {\em Parallel Machine Learning: Collaborative Filtering} \dates{2/2012 -- 6/2012}
 \newline\noindent {\em via Alternating Least Squares}
 \newline\noindent B.Sc. level, co-supervision with Philipp Haller
 \medskip
 
-\noindent {\bf Stanislav Peshterliev}, {\em Parallel Natural Language Processing} \dates{9/2011 -- 1/2012} 
+\noindent {\bf Stanislav Peshterliev}, {\em Parallel Natural Language Processing} \dates{9/2011 -- 1/2012}
 \newline\noindent {\em Algorithms in Scala}
 \newline\noindent M.Sc. level, co-supervision with Philipp Haller
 \medskip
 
-\noindent {\bf Olivier Blanvillain \& Louis Bliss}, {\em Parallelization of a Collaborative} \dates{9/2011 -- 1/2012} 
+\noindent {\bf Olivier Blanvillain \& Louis Bliss}, {\em Parallelization of a Collaborative} \dates{9/2011 -- 1/2012}
 \newline\noindent {\em Filtering Algorithm with Menthor}
 \newline\noindent B.Sc. level, co-supervision with Philipp Haller
 \medskip
 
-\noindent {\bf Florian Gysin}, {\em Improving Parallel Graph Processing Through} \dates{9/2011 -- 1/2012} 
+\noindent {\bf Florian Gysin}, {\em Improving Parallel Graph Processing Through} \dates{9/2011 -- 1/2012}
 \newline\noindent {\em the Introduction of Parallel Collections}
 \newline\noindent M.Sc. level, co-supervision with Philipp Haller
 \medskip
 
-\noindent {\bf Florian Gysin}, {\em Extending the Menthor Framework for Parallel} \dates{2/2011 -- 6/2011} 
+\noindent {\bf Georges Discry}, {\em Extending the Menthor Framework for Parallel} \dates{2/2011 -- 6/2011}
 \newline\noindent {\em Graph Processing to Distributed Computing}
 \newline\noindent M.Sc. level, co-supervision with Philipp Haller
 \medskip
