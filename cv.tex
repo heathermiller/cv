@@ -75,7 +75,7 @@
 
 \usepackage{url,fancyhdr}
 \usepackage[ampersand]{easylist}
-\usepackage[total={5.3in,8.75in},top=1.2in, left=1.5in]{geometry}
+\usepackage[total={5.3in,9.5in},top=0.6in, left=1.5in]{geometry}
 \usepackage{morefloats}
 %%\usepackage{revnum} % for reverse-numbered publications (revnumerate environment) if needed.
 
@@ -149,7 +149,7 @@
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead{}
 \fancyfoot{}
-\rhead{{\scriptsize\thepage}}
+% \rhead{{\scriptsize\thepage}}
 
 %% git revision control footer
 % \rfoot{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
@@ -158,7 +158,7 @@
 %%% Address and contact block
 %%%------------------------------------------------------------------------
 \begin{minipage}[t]{2.95in}
- \flushright {\footnotesize \href{http://ic.epfl.ch}{Faculty of Computer, Communication, \\ \vspace{-0.03in} and Information Science} \\ EPFL \\ \vspace{-0.03in} Station 14 \\ \vspace{-0.03in} 1015 Lausanne \\ \vspace{-0.05in} Switzerland}
+ \flushright {\footnotesize \href{http://ic.epfl.ch}{Faculty of Computer, Communication, \\ \vspace{-0.03in} and Information Science} \\ \vspace{-0.05in} EPFL, Station 14, 1015 Lausanne, Switzerland}
 
 \end{minipage}
 \hfill
@@ -179,14 +179,14 @@
 %% Name
 \noindent{\Large {\textsc{heather miller}}}
 
-\bigskip
+\medskip
 
 %% Research Interests
 \marginhead{Research \newline Interests}
 
 \noindent Programming language and library design; language support for concurrency and distribution; type systems; reactive programming
 
-\bigskip
+\medskip
 
 %% Education
 \marginhead{Education}
@@ -246,15 +246,15 @@
 % \smallskip
 \newline\noindent Philipp Haller, Heather Miller
 \newline\noindent\emph{Scala Workshop}
-\bigskip
+\medskip
 
 %% Service
 \marginhead{Academic \newline Service}
 
-\noindent{\bf Committees}: Scala 2014 (co-chair), Scala 2013 (co-chair)
+\noindent{\bf Committees}: Scala 2014 (organizer \& co-chair), Scala 2013 (organizer \& co-chair)
 \newline\noindent{\bf Reviewer} for: ECOOP 2013, Scala 2013
 
-\bigskip
+\medskip
 
 %% Selected Broader Service
 \medskip
@@ -264,7 +264,6 @@
 \newline\noindent Members include the dean of the college as well as representatives from every branch of the college, administrative, PhD, faculty, etc Quarterly meetings to steer the college and introduce new initiatives.
 \medskip
 
-\pagebreak
 \noindent \href{http://ic-gsa.epfl.ch/}{\bf EPFL CS Graduate Student Association}, {\bf \em President} \dates{2009 -- 2011}
 \newline\noindent Volunteer student organization with a mission to foster a sense of community and collaboration between different research groups in the college. Initiatives led/introduced:
 \vspace{0.05in}
@@ -280,6 +279,7 @@
 
 % \bigskip
 
+\pagebreak
 %% Teaching Experience
 \medskip
 \marginhead{Teaching \newline Experience}
@@ -291,7 +291,7 @@
 \begin{easylist}[itemize]
 & Lead TA organizing a team of graduate students, editing lecture videos, managing content production, designed course exercises with cloud-hosted grading, etc
 
-& Created extensive course evaluations with interactive visualizations; led to a publication at ICSE'14
+& Created extensive course evaluations with interactive visualizations; led to ICSE'14 paper
 \end{easylist}
 \medskip
 
@@ -306,9 +306,9 @@
 \noindent {\bf Teaching Assistant}, {\em Programming Principles} \dates{2011}
 \newline\noindent EPFL Undergraduate course on functional and logic programming
 
-\bigskip
+\medskip
 
-\vspace{-0.05in}
+% \vspace{-0.01in}
 %% Open Source
 \medskip
 \marginhead{Open Source}
@@ -327,16 +327,16 @@
 \newline unified non-blocking concurrency substrate for Scala, Akka, Play, and others
 
 & \href{http://docs.scala-lang.org/}{{\bf Scala Documentation}}, {\bf \em creator, writer, lead maintainer}
-\newline a central website for community-driven documentation for the Scala programming language and core libraries
+\newline a central website for community-driven documentation for the Scala project
 
 & \href{https://wiki.scala-lang.org/display/SW/Scaladoc}{{\bf Scaladoc}}, {\bf \em co-maintainer}
 \newline documentation tool for Scala's official API documentation
 
 \end{easylist}
 
-\bigskip
+\medskip
 
-\vspace{-0.05in}
+\vspace{-0.01in}
 %% Awards
 \medskip
 \marginhead{Awards}
@@ -353,7 +353,7 @@
 \newline\noindent SMART US Department of Defense Scholarship Alternate \dates{2007}
 \newline\noindent Cooper Union Full Tuition Scholarship \dates{2004 -- 2006}
 
-\bigskip
+\medskip
 
 
 %% Talks
@@ -371,7 +371,7 @@
 
 \noindent\href{http://heather.miller.am/files/IU-PL-Abstractions-for-Dist-Programming.pdf}{\bf PL Abstractions for Distributed Programming: Pickle Your Spores!} \dates{Indiana University \newline\mbox{}~\hfill {\bf \em (invited)}}
 \linebreak\noindent Bloomington, IN, USA. October 25, 2013
-\bigskip
+\medskip
 
 
 \noindent\href{https://speakerdeck.com/heathermiller/spores-distributable-functions-in-scala}{\bf Spores: Distributable Functions in Scala} \dates{Strange Loop 2013}
@@ -382,9 +382,9 @@
 \linebreak\noindent Montpellier, France. July 1, 2013
 \medskip
 
-\noindent{\bf Scala as a Research Tool} \dates{ECOOP 2013 \newline\mbox{}~\hfill Tutorial}
-\linebreak\noindent Montpellier, France. July 1, 2013
-\medskip
+% \noindent{\bf Scala as a Research Tool} \dates{ECOOP 2013 \newline\mbox{}~\hfill Tutorial}
+% \linebreak\noindent Montpellier, France. July 1, 2013
+% \medskip
 
 \noindent\href{https://speakerdeck.com/heathermiller/on-pickles-and-spores-improving-support-for-distributed-programming-in-scala}{\bf On Pickles \& Spores: Improving Scala's Support for Distributed Programming} \dates{ScalaDays 2013}\vspace{-0.03in}
 \noindent\linebreak New York, NY, USA. June 12, 2013
@@ -392,6 +392,6 @@
 
 \noindent\href{http://lampwww.epfl.ch/~hmiller/files/Futures-Try-PhillyETE.pdf}{\bf Futures \& Promises in Scala 2.10} \dates{PhillyETE 2013 \newline\mbox{}~\hfill {\bf \em (invited)}}
 \linebreak\noindent Philadelphia, PA, USA. April 2, 2013
-\bigskip
+\medskip
 
 \end{document}
