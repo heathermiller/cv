@@ -101,6 +101,9 @@
 
 \usepackage{marvosym}
 
+% \usepackage{showframe}
+\usepackage[width=4.825in,top=1.7in]{geometry}
+
 %%%------------------------------------------------------------------------
 %%% Document
 %%%------------------------------------------------------------------------
@@ -150,12 +153,19 @@
 \fancyfoot{}
 \rhead{{\scriptsize\thepage}}
 
+% \setlength{\headsep}{12pt}
+\textheight=580pt
+\raggedbottom
+\thispagestyle{fancy}
+
 %% git revision control footer
 \rfoot{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
+
 
 %%%------------------------------------------------------------------------
 %%% Address and contact block
 %%%------------------------------------------------------------------------
+% \begin{absolutelynopagebreak}
 \begin{minipage}[t]{2.95in}
  \flushright {\footnotesize \href{http://ic.epfl.ch}{Faculty of Computer, Communication, \\ \vspace{-0.03in} and Information Science} \\ EPFL \\ \vspace{-0.03in} Station 14 \\ \vspace{-0.03in} 1015 Lausanne \\ \vspace{-0.05in} Switzerland}
 
@@ -221,6 +231,7 @@
 \medskip
 \marginhead{Teaching \newline Experience}
 
+% \begin{minipage}{\linewidth}
 \noindent {\bf Lecturer, Co-Designer}, {\em Reactive Programming \& Parallelism} \dates{2015}
 \newline\noindent EPFL Undergraduate course on parallel, distributed, and asynchronous
 \newline\noindent programming (\textasciitilde90 students)
@@ -247,13 +258,15 @@
 \bigskip
 
 \noindent {\bf (Lead) Teaching Assistant}, {\em Programming Principles} \dates{2011-2014}
-\newline\noindent Required EPFL undergraduate course on functional and logic programming
+\newline\noindent Required EPFL undergraduate course on functional \& logic programming
 \newline\noindent (\textasciitilde160 students)
-\bigskip
+\medskip
 
 \noindent {\bf Instructor}, {\em Scala as a Research Tool} \dates{2013}
 \newline\noindent ECOOP Tutorial
-\bigskip
+\pagebreak
+% \bigskip
+
 
 % \noindent {\bf Teaching Assistant}, {\em Programming Principles} \dates{2011, 2014}
 % \newline\noindent Required EPFL Undergraduate course on functional and logic programming
@@ -261,18 +274,20 @@
 % \bigskip
 
 %% Research Interests
-\marginhead{Research \newline Interests}
+\textheight=580pt
+\marginhead{{\vskip 0.3em}Research \newline Interests}
 % \medskip
 
 \noindent Concurrent, distributed, data-centric, and data-intensive (big data) programming, from the perspective of programming languages. I work on both theoretical ideas {\em \&} implementations for the Scala programming language which seek to make it easier to build distributed systems.
+\bigskip
 
 % Programming language support for concurrent and distributed programming; \\type systems; non-standard uses of types for data-centric programming and big data; language and library design
 
 
-\bigskip
+% \bigskip
 
 %% Publications
-\marginhead{{\vskip 0.3em}Publications}
+\marginhead{Publications}
 % \medskip
 
 %% Use revnumerate environment if numbered publications are needed.
@@ -340,10 +355,9 @@
 % \smallskip
 \newline\noindent Philipp Haller, Heather Miller
 \newline\noindent\emph{Scala Workshop}
-\bigskip
-
 % \bigskip
 
+\pagebreak
 %% In Progress
 \marginhead{{\vskip 0.4em}Submitted/In Preparation}
 \medskip
@@ -369,8 +383,7 @@
 
 \noindent{\bf Improving Human-Compiler Interaction Through Customizable Type Feedback}\dates{}
 \newline\noindent Hubert Plociniczak, Heather Miller, Martin Odersky
-% \bigskip
-\medskip
+\bigskip
 
 %% Selected Tech Reports
 \marginhead{{\vskip 0.3em}Selected \newline Tech Reports}
@@ -448,7 +461,7 @@
 
 \bigskip
 
-
+\pagebreak
 %% Talks
 \medskip
 \marginhead{Selected Talks}
@@ -637,6 +650,7 @@
 \newline\noindent M.Sc. level, co-supervision with Philipp Haller
 \medskip
 
+\pagebreak
 %% References
 \medskip
 \marginhead{References}
