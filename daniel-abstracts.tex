@@ -1,0 +1,289 @@
+%%% A template to produce a nice-looking Curriculum Vitae.
+%%% Original by Kieran Healy <kjhealy@gmail.com>, tweaked by Heather Miller <heather.c.miller@gmail.com>
+%%% Most recent version is at http://github.com/heathermiller/cv
+%%%
+%%% ------------------------------------------------------------------------
+%%% Requirements (should be included in a modern tex distribution):
+%%% ------------------------------------------------------------------------
+%%% xelatex
+%%% fontspec.sty
+%%% hyperrref.sty
+%%% xunicode.sty
+%%% color.sty
+%%% url.sty
+%%% fancyhdr.sty
+%%%
+%%% ------------------------------------------------------------------------
+%%% Optional
+%%% ------------------------------------------------------------------------
+%%% git
+%%% vc.sty
+%%% revnum.sty
+%%% Fonts
+%%%
+%%% ------------------------------------------------------------------------
+%%% Note
+%%%------------------------------------------------------------------------
+%%% Because this is a hand-tweaked file, be on the look out for \medksip,
+%%% \bigskip and \newpage commands here and there, which are used to balance
+%%% the layout or avoid widows & orphans, etc. You should of course add or
+%%% remove these as needed.
+%%%------------------------------------------------------------------------
+
+\documentclass[9pt]{article}
+
+%%%------------------------------------------------------------------------
+%%% Metadata
+%%%------------------------------------------------------------------------
+
+%% Change as needed. Or just add me as a coauthor. Only some of these are
+%% used below in the hyperref declaration and address banner section.
+\def\myauthor{Daniel Klug}
+\def\mytitle{Vita}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myaffiliation{University of Basel}
+\def\myaddress{Department of Philosophy \& Media Studies \\ Institute for Media Studies}
+\def\myemail{Daniel.Klug@unibas.ch}
+\def\mywebtext{https://populaerkultur.unibas.ch}
+\def\myweb{https://populaerkultur.unibas.ch/home/popularculture-en/}
+\def\myfax{+41 61 267 08 90}
+\def\myphone{+41 78 696 40 58}
+\def\myversion{}
+\def\myrevision{}
+
+
+\def\myaffiliation{University of Basel}
+\def\myauthor{Daniel Klug}
+\date{} % not used (revision control instead)
+\def\mykeywords{Daniel, Klug, Daniel Klug, Vita, CV, Resume}
+
+%%%------------------------------------------------------------------------
+%%% Git version tracking
+%%%------------------------------------------------------------------------
+
+%% If you don't use git or the vc package (from CTAN), comment this out.
+%% If you comment it out, be sure to remove the \rfoot comment below, too.
+% \immediate\write18{sh ./vc}
+% \input{vc}
+
+%%%------------------------------------------------------------------------
+%%% Required style files
+%%%------------------------------------------------------------------------
+
+\usepackage{url,fancyhdr}
+\usepackage[ampersand]{easylist}
+%%\usepackage{revnum} % for reverse-numbered publications (revnumerate environment) if needed.
+
+%% needed for xelatex to work
+\usepackage{fontspec}
+\usepackage{xunicode}
+
+%% color for the links
+% \usepackage[usenames,dvipsnames]{color}
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{DarkBlue}{HTML}{265B8C}
+
+%% hyperlinks
+\usepackage[xetex,
+	colorlinks=true,
+	urlcolor=DarkBlue,
+	plainpages=false,
+  	pdfpagelabels,
+  	bookmarksnumbered,
+  	pdftitle={\mytitle},
+  	pagebackref,
+  	pdfauthor={\myauthor},
+  	pdfkeywords={\mykeywords}
+  	]{hyperref}
+
+\usepackage{marvosym}
+
+% \usepackage{showframe}
+\usepackage[width=4.825in,top=1.7in]{geometry}
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
+\begin{document}
+
+%% Choose fonts for use with xelatex
+%% Minion and Myriad are widely available, from Adobe.
+%% Pragmata is available to buy at http://www.fsd.it/fonts/pragma.htm
+%% and is worth every penny. Any good monospace font will work fine, though.
+%% Consolas or inconsolata are good alternatives.
+\setromanfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Minion Pro}
+\setsansfont[Mapping=tex-text,Colour=AA0000]{Myriad Pro}
+\setmonofont[Mapping=tex-text,Scale=0.9]{Inconsolata}
+
+
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
+
+%% Marginal header
+%% Note: as the document goes on you may need to introduce a (gradually increasing)
+%% \vspace element to keep the marginal header pleasingly aligned with the first
+%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or
+%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\normalsize\vspace{-1em}\flushright #1}}}}
+
+\newcommand{\dates}[1]{\hfill \emph{#1}}
+
+%% custom ampersand (font consistent with the one chosen above)
+\newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
+
+%% No bullets on labels
+\renewcommand{\labelitemi}{~}
+
+%% Custom hanging indent for vita items
+\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
+
+%%%------------------------------------------------------------------------
+%%% Page layout
+%%%------------------------------------------------------------------------
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+\fancyfoot{}
+\rhead{{\scriptsize\thepage}}
+
+% \setlength{\headsep}{12pt}
+\textheight=580pt
+\raggedbottom
+\thispagestyle{fancy}
+
+%% git revision control footer
+% \rfoot{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
+
+
+%%%------------------------------------------------------------------------
+%%% Address and contact block
+%%%------------------------------------------------------------------------
+% \begin{absolutelynopagebreak}
+\begin{minipage}[t]{2.95in}
+ \flushright {\footnotesize \href{http://mewi.unibas.ch}{Department of Philosophy \& Media Studies, \\ \vspace{-0.03in} Seminar for Media Studies} \\ University of Basel \\ Holbeinstrasse 12 \\ \vspace{-0.03in} 4051 Basel \\ \vspace{-0.05in} Switzerland}
+
+\end{minipage}
+\hfill
+%\begin{minipage}[t]{0.0in}
+% dummy (needed here)
+%\end{minipage}
+\hfill
+\begin{minipage}[t]{1.7in}
+  \flushright \footnotesize Phone: \myphone \\
+  Fax: \myfax  \\
+  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
+  {\scriptsize  \vspace{-0.03in} \texttt{\href{\myweb}{\mywebtext}}}
+\end{minipage}
+
+
+\medskip
+
+%% Name
+\noindent{\huge {\textsc{daniel klug}}}
+\reversemarginpar
+
+\bigskip\bigskip
+
+%% Project Summaries
+
+% \marginhead{Popular \newline Culture \newline Research}
+
+\noindent\textsf{\large Popular Culture Research Focus at the Institute of Media Studies}
+% \vspace{0.05in}
+% \medskip
+\smallskip
+
+\noindent Popular culture is a mature field of research in the area of ``Media, Communication, Society'' at \href{http://mewi.unibas.ch/}{the Institute of Media Studies, University of Basel}. This includes the analyses of cultural products as well as of forms of everyday cultural practices. Led by Prof. Dr. Klaus Neumann-Braun, an international and interdisciplinary team of researchers (media studies, sociology, musicology and linguistics) works on the following subjects:
+
+\medskip
+\begin{easylist}[itemize]
+& \href{http://populaerkultur.unibas.ch/home/musik-videoclips/musicvideos-en/}{Popular Music and Video Clips}
+
+& \href{http://populaerkultur.unibas.ch/home/reality-tv/scriptedreality-en/}{Reality TV}
+
+& \href{http://populaerkultur.unibas.ch/home/av-analyse/travis-en/}{Computer-based Analysis of Audiovisual Media Artifacts}
+\end{easylist}
+
+\medskip
+\noindent Teaching and research covers methodological and theoretical approaches concerning the production, distribution, reception, and (further) processing of mass media phenomena and their forms and functions within society and culture.
+
+\medskip
+\noindent There are established scientific collaborations with the \href{http://www1.ids-mannheim.de/}{Institute for the German Language} (Mannheim/ Germany) and the \href{http://www.zpkm.uni-freiburg.de/}{Centre of Popular Culture and Music} (Freiburg/ Germany).
+
+\bigskip
+\noindent{\color{gray}\large\textsc{research project:}}
+\newline\noindent\textsf{\large Image-Text-Sound-Analyses of Music Videos (2008 – 2011)}
+% \vspace{0.05in}
+% \medskip
+\smallskip
+
+\noindent The project focused on the specific structures and the audio visual contents of music videos. Typically, analyses of music videos tend to overlook three basic aspects: the importance of sound, immanent structures of music and (pop)musical contexts, and the genre specific structural principles of music videos. As a result, there are many heterogeneous attempts to include the analysis of the underlying musical structures into an integrated analysis of music videos. Previously, however, no standardized analytical tool has been developed to provide an adequate analysis of the audio visual relations in music videos and related media artifacts.
+\medskip
+
+\noindent An adequate analytical tool needs to provide options to describe and to visualize the overall nature and materiality of audiovisual media artifacts, such as music videos. Therefore, an appropriate analysis includes among others, the character's actions, montage, camera movements, textual elements and also musical actions and structures. All of these single analytical categories must be put in relation to each other to capture the audiovisual character of a music video.
+\medskip
+
+\noindent These preliminary considerations led to the development of \href{http://populaerkultur.unibas.ch/home/av-analyse/travis-en/}{trAVis}, a music-centered web application for the transcription and analysis of short audiovisual media products.
+
+\medskip
+\noindent{\em Funded by the Swiss National Science Foundation (SNF)}
+
+
+
+\bigskip
+\noindent{\color{gray}\large\textsc{research project:}}
+\newline\noindent\textsf{\large Varieties of scripted reality programs in television and on the internet. Comparative analyses of production, product and reception in (German-speaking) Switzerland (2014 – 2016)}
+% \vspace{0.05in}
+% \medskip
+\smallskip
+
+\noindent The project focuses on a type of reality program found on German-speaking television called ``scripted reality''. Scripted reality shows are a specific phenomenon typically based on a fictional script while also integrating factual elements. This is because such shows rely on the nonfictional performance skills of amateur actors to act out fictionalized versions (``script'') of everyday scenarios (``reality''). Since scripted reality shows adopt a documentary style of filming and aesthetic modes of presentation of traditional reality television, a close relationship to forms of factual entertainment is created.
+\medskip
+
+\noindent This research project examines the phenomenon of scripted reality formats from three main perspectives: structuring proposals based on literature reviews, analyses of the production methods of scripted reality shows, and analyses of the format structures of scripted reality as a media product in television and on the internet. The literature reviews aim at situating scripted reality in the broader genre of reality television to develop a typology. The analyses of the production of scripted reality should provide exemplary reconstructions of production methods in the context of relations between entertainment and information. For example, the disclosure of specific production methods can illustrate in what way producers are trying to activate authentic emotions from the amateur actors in order to integrate factual aspects into the scripted fictional story. The format analyses aim at examining key structures in selected scripted reality shows on the level of communicated aspects (e.g. form, content, dramaturgy) and the level of the ways of communicating (e.g. paratexts, interpretive patterns).
+\medskip
+
+\noindent The analysis of corresponding social media sites (e.g. Facebook) should illustrate their possibilities for reinforcing the ambiguous nature of scripted reality shows.
+
+\medskip
+\noindent{\em Funded by the Swiss National Science Foundation (SNF)}
+
+
+\bigskip
+\bigskip
+\noindent{\color{gray}\large\textsc{research tool:}}
+\newline\noindent\textsf{\large trAVis is a music-centered web application for the transcription and analysis of short audiovisual media products}
+% \vspace{0.05in}
+% \medskip
+\smallskip
+
+\noindent trAVis was developed as part of the project \href{https://populaerkultur.unibas.ch/home/musik-videoclips/musicvideos-en/}{Image-Text-Sound-Analyses} at the \href{http://mewi.unibas.ch/}{Institute of Media Studies}, University of Basel. It combines image/film analysis and text hermeneutics with musicologist approaches and theoretical concepts in social science.
+\medskip
+
+\noindent trAVis is an innovative free accessible web application. It provides a desktop, tools (e.g. video loop function, scale function, maximize/minimize view) and individual analytical categories to transcribe and analyze images/film (e.g. figure, setting, camera distance, montage), text and music/sound (e.g. voice, cast, rhythm, harmony) in audiovisual media artifacts like music videos, commercials, and web clips.
+\medskip
+
+\noindent trAVis enables students and researchers to visualize and de-/reconstruct immanent intermedial structures in mainly music-centered audiovisual phenomena. This can be done in various levels from a detailed analysis to a broad overview.
+\medskip
+
+\noindent trAVis is freely available at: \href{http://www.travis-analysis.org}{www.travis-analysis.org}
+\medskip
+
+
+
+% \vspace{0.05in}
+% \medskip
+\smallskip
+
+
+
+
+\end{document}
