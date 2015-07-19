@@ -66,8 +66,8 @@
 
 %% If you don't use git or the vc package (from CTAN), comment this out.
 %% If you comment it out, be sure to remove the \rfoot comment below, too.
-\immediate\write18{sh ./vc}
-\input{vc}
+% \immediate\write18{sh ./vc}
+% \input{vc}
 
 %%%------------------------------------------------------------------------
 %%% Required style files
@@ -159,7 +159,7 @@
 \thispagestyle{fancy}
 
 %% git revision control footer
-\rfoot{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
+% \rfoot{\texttt{\scriptsize \VCRevision\ on \VCDateTEX}} % git revision info inserted via external script -- see docs for vc package for details. comment out this line if you're not using vc, and also remove the \input{vc} line above.
 
 
 %%%------------------------------------------------------------------------
@@ -203,9 +203,9 @@
 %% Education
 \marginhead{Education}
 
-\noindent{\bf \em EPFL}, \emph{Lausanne, Switzerland} \vspace{0.01in} \dates{2009 --}
+\noindent{\bf \em EPFL}, \emph{Lausanne, Switzerland} \vspace{0.01in} \dates{9/2009 -- 9/2015}
 \newline Ph.D. in Computer Science
-\newline Advisor: Martin Odersky \dates{2011 --}
+\newline Advisor: Martin Odersky \dates{2011 -- 2015}
 \bigskip
 
 \noindent{\bf \em University of Miami}, \emph{Coral Gables, FL} \vspace{0.01in}  \dates{2006 -- 2009}
@@ -219,13 +219,41 @@
 \medskip
 \marginhead{Professional \newline Experience}
 
-\noindent {\bf Research Intern}, {\bf \em Databricks}, \emph{Berkeley, CA, USA} \vspace{0.01in} \dates{8/2014 -- 11/2014}
+\noindent {\bf Researcher}, {\bf \em Databricks}, \emph{Berkeley, CA, USA} \vspace{0.01in} \dates{8/2014 -- 11/2014}
 \newline\noindent Supervisor: Matei Zaharia
 \newline\noindent Integrated Scala Pickling, our framework for fast, boilerplate-free, extensible
 \newline\noindent serialization focused on distributed programming (OOPSLA'13) into Spark.
-\newline\noindent Developed new function-passing programming model and framework, can be
-\newline\noindent thought of as a generalization of Spark/MapReduce programming model.
+\newline\noindent Developed new function-passing programming model and framework.
 \bigskip
+
+\noindent {\bf Research Engineer}, {\bf \em University of Utah}, \emph{Salt Lake City, UT, USA} \vspace{0.01in} \dates{5/2009 -- 8/2009}
+\newline\noindent Supervisor: Prof. Dick Normann
+\newline\noindent Bioengineering Department, developed a software neural interface to stimulate
+\newline\noindent the peripheral nervous system for neuroprosthetics research.
+\bigskip
+
+\noindent {\bf Multimedia Engineer}, {\bf \em Arnold Center for Confluent Media Studies},
+\newline\noindent \emph{Coral Gables, FL, USA} \vspace{0.01in} \dates{6/2007 -- 12/2008}
+\newline\noindent Web development, graphic design, web design, and animation for wide array
+\newline\noindent of projects from feature-length films to basic identity design.
+\bigskip
+
+\noindent {\bf Research Assistant}, {\bf \em University of Minnesota}, \emph{Minneapolis, MN, USA} \vspace{0.01in} \dates{6/2008 -- 8/2008}
+\newline\noindent Supervisor: Prof. Bethanie Stadler
+\newline\noindent Electrical and Computer engineering department, worked toward the development
+\newline\noindent of an intravascular ultrasound transducer using magnetostrictive nanowires.
+\bigskip
+
+\noindent {\bf Electronic Engineer}, {\bf \em Weeks Recording Studio}, \emph{Coral Gables, FL, USA} \vspace{0.01in} \dates{8/2006 -- 8/2008}
+\newline\noindent Maintained all electronic studio equipment, from major repairs to installations to cabling.
+\bigskip
+
+\noindent {\bf Sound Reinforcement Engineer}, {\bf \em University of Miami Recording Services},
+\newline\noindent \emph{Coral Gables, FL, USA} \vspace{0.01in} \dates{1/2006 -- 8/2008}
+\newline\noindent Sound reinforcement for wide variety of music acts performing in University of Miami
+\newline\noindent concert halls. From solo performances and small ensembles to full orchestras.
+\bigskip
+
 
 %% Teaching Experience
 \medskip
@@ -264,8 +292,8 @@
 
 \noindent {\bf Instructor}, {\em Scala as a Research Tool} \dates{2013}
 \newline\noindent ECOOP Tutorial
-\pagebreak
-% \bigskip
+% \pagebreak
+\bigskip
 
 
 % \noindent {\bf Teaching Assistant}, {\em Programming Principles} \dates{2011, 2014}
@@ -315,6 +343,8 @@
 \newline\noindent\emph{ACM SIGSOFT International Conference on Software Engineering}
 \bigskip
 
+\pagebreak
+
 \noindent\href{http://infoscience.epfl.ch/record/188383}{\bf Instant Pickles: Generating Object-Oriented Pickler}\dates{OOPSLA 2013}\vspace{-0.03in}
 \newline\noindent\href{http://infoscience.epfl.ch/record/188383}{\bf Combinators for Fast and Extensible Serialization}
 % \smallskip
@@ -357,7 +387,7 @@
 \newline\noindent\emph{Scala Workshop}
 % \bigskip
 
-\pagebreak
+% \pagebreak
 %% In Progress
 \marginhead{{\vskip 0.4em}Submitted/In Preparation}
 \medskip
@@ -407,6 +437,8 @@
 \newline\noindent\emph{June 2012}
 % \bigskip
 \medskip
+
+\pagebreak
 
 %% Open Source
 \medskip
@@ -461,7 +493,7 @@
 
 \bigskip
 
-\pagebreak
+% \pagebreak
 %% Talks
 \medskip
 \marginhead{Selected Talks}
@@ -562,14 +594,15 @@
 % \bigskip
 
 
-%% External Activities
-\medskip
-\marginhead{External \newline Activities}
-
-\noindent {\bf \href{https://www.hackerschool.com/}{Hacker School}}, resident\dates{2015}
-\newline\noindent {\bf \href{http://scalawags.tv/}{Scalawags Monthly Podcast}}, co-host\dates{2014 --}
-
-\bigskip
+% %% External Activities
+% \medskip
+% \marginhead{External \newline Activities}
+%
+% % \noindent {\bf \href{https://www.hackerschool.com/}{Hacker School}}, resident\dates{2015}
+% % \newline
+% \noindent {\bf \href{http://scalawags.tv/}{Scalawags Monthly Podcast}}, co-host\dates{2014 --}
+%
+% \bigskip
 
 %% External Service
 \medskip
@@ -600,10 +633,11 @@
 
 % \bigskip
 
+% \pagebreak
 %% Students Supervised
 \medskip
 \marginhead{Students \newline Supervised\footnotemark[1]}
-\footnotetext[1]{At EPFL, research groups offer substantial projects for B.Sc./M.Sc. students to complete for credit. EPFL PhD students design and supervise these projects, as well as M.Sc. thesis projects.}
+% \footnotetext[1]{At EPFL, research groups offer substantial projects for B.Sc./M.Sc. students to complete for credit. EPFL PhD students design and supervise these projects, as well as M.Sc. thesis projects.}
 
 \noindent {\bf Louis Bliss}, {\em Incremental Picklers for Scala Pickling} \dates{9/2013 -- 1/2014}
 \newline\noindent M.Sc. level, co-supervision with Philipp Haller
@@ -651,9 +685,9 @@
 \newline\noindent M.Sc. level, co-supervision with Philipp Haller
 \medskip
 
-\pagebreak
+% \pagebreak
 %% References
-\medskip
+\bigskip
 \marginhead{References}
 
 \noindent {\bf Martin Odersky}
