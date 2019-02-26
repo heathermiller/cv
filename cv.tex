@@ -45,12 +45,12 @@
 \def\mybibliostyle{plain}
 \def\mybibliocommand{}
 \def\mysubtitle{}
-\def\myaffiliation{Northeastern University}
-\def\myaddress{College of Computer and Information Science}
-\def\myemail{heather@ccs.neu.edu}
+\def\myaffiliation{Carnegie Mellon University}
+\def\myaddress{School of Computer Science}
+\def\myemail{heather.miller@cs.cmu.edu}
 \def\myweb{http://heather.miller.am}
-\def\myfax{+1 (617) 373-5121}
-\def\myphone{+1 (646) 301-1825}
+%\def\myfax{+1 (617) 373-5121}
+\def\myphone{+1 (412) 268-2748}
 \def\myversion{}
 \def\myrevision{}
 
@@ -167,7 +167,7 @@
 %%%------------------------------------------------------------------------
 % \begin{absolutelynopagebreak}
 \begin{minipage}[t]{2.95in}
- \flushright {\footnotesize \href{http://www.ccis.northeastern.edu/}{College of Computer, \\ \vspace{-0.03in} and Information Science} \\ Northeastern University \\ \vspace{-0.03in} 202 WVH \\ \vspace{-0.03in} Boston, MA 02115 \\ \vspace{-0.05in} USA}
+ \flushright {\footnotesize \href{https://www.cs.cmu.edu/}{School of Computer Science} \\ \href{http://isri.cmu.edu}{Institute for Software Research} \\ Carnegie Mellon University \\ \vspace{-0.03in} 5000 Forbes Ave \\ \vspace{-0.03in} Pittsburgh, PA 15213 \\ \vspace{-0.05in} USA}
 
 \end{minipage}
 \hfill
@@ -177,7 +177,7 @@
 \hfill
 \begin{minipage}[t]{1.7in}
   \flushright \footnotesize Phone: \myphone \\
-  Fax: \myfax  \\
+  %Fax: \myfax  \\
   {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}}} \\
   {\scriptsize  \vspace{-0.03in} \texttt{\href{\myweb}{\myweb}}}
 \end{minipage}
@@ -234,11 +234,17 @@
 \medskip
 \marginhead{Employment}
 
-\noindent {\bf Northeastern University}, \emph{Boston, MA, USA} \vspace{0.01in} \dates{9/2016 -- }
-\newline\noindent {\bf \em Assistant Clinical Professor}
+\noindent {\bf Carnegie Mellon University}, \emph{Pittsburgh, PA, USA} \vspace{0.01in} \dates{8/2018 -- }
+\newline\noindent {\bf \em Assistant Professor}
+\newline School of Computer Science, Institute for Software Research
 \bigskip
 
-\noindent {\bf Scala Center, EPFL}, \emph{Lausanne, Switzerland} \vspace{0.01in} \dates{10/2015 -- }
+\noindent {\bf Northeastern University}, \emph{Boston, MA, USA} \vspace{0.01in} \dates{9/2016 -- 7/2018}
+\newline\noindent {\bf \em Assistant Clinical Professor}
+\newline College of Computer and Information Science
+\bigskip
+
+\noindent {\bf Scala Center, EPFL}, \emph{Lausanne, Switzerland} \vspace{0.01in} \dates{10/2015 -- 7/2018}
 \newline\noindent {\bf \em Executive Director, Research Scientist}
 \newline\noindent Founded a new not-for-profit center dedicated to research,
 \newline\noindent open source development, and education surrounding the Scala
@@ -258,6 +264,10 @@
 %% Teaching Experience
 \medskip
 \marginhead{Teaching \newline Experience \newline (Classroom)}
+
+\noindent {\bf Co-Instructor},  \dates{Spring 2019}
+\newline\noindent 17-356: Software Engineering for Startups \dates{Carnegie Mellon}
+\bigskip
 
 \noindent {\bf Instructor, Designer},  \dates{Spring 2018}
 \newline\noindent CS4240: Large-Scale Parallel Data Processing \dates{Northeastern}
@@ -302,15 +312,15 @@
 & Designed lectures and produced lecture videos. Designed exercises
 \newline and developed cloud-hosted automated graders.
 
-& Between March-November 2017, over 120,000 registered learners. 
+& Between March-November 2017, over 120,000 registered learners.
 \end{easylist}
 
-%\begin{easylist}[itemize]	
+%\begin{easylist}[itemize]
 %& General introduction to distributed systems for big data
-%\newline up through shuffling and optimizations like partitioning, 
+%\newline up through shuffling and optimizations like partitioning,
 %\newline as well as the basics of data analytics.
 %
-%& Between March-November 2017, over 120,000 registered learners. 
+%& Between March-November 2017, over 120,000 registered learners.
 %\end{easylist}
 \bigskip
 
@@ -358,14 +368,16 @@
 \marginhead{Book}
 
 \noindent{\bf Distributed Programming}\dates{MIT Press 2018/2019}
-\newline\noindent Heather Miller, Nat Dempkowski, James Larisch, 
+\newline\noindent Heather Miller, Nat Dempkowski, James Larisch,
 \newline\noindent Christopher Meiklejohn, and Philipp Haller
 \smallskip
 \newline\noindent A textbook about the building blocks we use to build distributed systems. These range from the small, RPC, futures, actors, to the large; systems built up of these components like MapReduce and Spark. We explore issues and concerns central to distributed systems like consistency, availability, and fault tolerance, from the lens of the programming models and frameworks that the programmer uses to build these systems.
 \newline\noindent\href{https://github.com/heathermiller/dist-prog-book}{\em Source (draft)}
 \bigskip
 
-\bigskip
+\pagebreak
+
+%\bigskip
 %% Publications: Journals
 \marginhead{Publications: \newline Journals}
 % \medskip
@@ -378,14 +390,13 @@
 % \noindent\href{http://infoscience.epfl.ch/record/191239}{\bf Function-Passing Style: Typed, Distributed}\dates{}\vspace{-0.03in}
 % \newline\noindent\href{http://infoscience.epfl.ch/record/191239}{\bf Functional Programming}
 \noindent{\bf A Programming Model and Foundation for Lineage-Based Distributed}\dates{JFP 2018}
-\noindent{\bf Computation}\dates{(to appear)}
 \newline\noindent Heather Miller, Philipp Haller, Normen M\"{u}ller
 \newline\noindent\emph{Journal of Functional Programming}
 \newline\noindent\emph{Special Issue: Programming Languages for Big Data}
 \bigskip
 
 
-\pagebreak
+%\pagebreak
 
 %% Publications: Conferences
 \marginhead{Publications: \newline Conferences}
@@ -534,7 +545,8 @@
 
 \noindent {\bf General Chair and/or Program Chair:}
 %\smallskip
-\newline\noindent {\em Curry On} {(\textbf{Curry On})} \dates{2015, 2016, 2017, 2018}
+\newline\noindent {\em Curry On} {(\textbf{Curry On})} \dates{2015, 2016, 2017, 2018, 2019}
+\newline\noindent {\em Workshop on Principles and Practice of Consistency for Distributed Data} {(\textbf{PaPoC})} \dates{2019}
 \newline\noindent {\em Trends in Functional Programming in Education} {(\textbf{TFPIE})} \dates{2018}
 \newline\noindent {\em Scala Symposium} {(\textbf{Scala})}  \dates{2013, 2014, 2017}
 \newline\noindent {\em Programming Models \& Languages for Distributed Computation} {(\textbf{PMLDC})}  \dates{2016, 2017}
@@ -543,14 +555,17 @@
 \noindent {\bf Organizing Committee Member:}
 %\smallskip
 \newline {\em Object-Oriented Programming, Systems, Languages \& Applications} {(\textbf{OOPSLA})} \dates{2018}
-\newline {\em European Conference on Object-Oriented Programming} {(\textbf{ECOOP})} \dates{2015 -- 2018}
+\newline {\em European Conference on Object-Oriented Programming} {(\textbf{ECOOP})} \dates{2015 -- 2019}
 \bigskip
 
 \noindent {\bf Program Committee Member:}
 %\smallskip
+\newline\noindent {\em Object-Oriented Programming, Systems, Languages \& Applications} {(\textbf{OOPSLA})} \dates{2019}
+\newline\noindent {\em European Conference on Object-Oriented Programming} {(\textbf{ECOOP})} \dates{2019}
+\newline\noindent {\em Symposium on Principles of Programming Languages} {(\textbf{POPL})} \dates{2019}
 \newline\noindent {\em International Conference on Functional Programming} {(\textbf{ICFP})} \dates{2018}
-\newline\noindent {\em Object-Oriented Programming, Systems, Languages \& Applications} {(\textbf{OOPSLA})} \dates{2017}
 \newline\noindent {\em Off the Beaten Track} {(\textbf{OBT})} \dates{2018}
+\newline\noindent {\em Object-Oriented Programming, Systems, Languages \& Applications} {(\textbf{OOPSLA})} \dates{2017}
 \newline\noindent {\em Scala Symposium} {(\textbf{Scala})} \dates{2016}
 \newline\noindent {\em Symposium on Trends in Functional Programming} {(\textbf{TFP})} \dates{2016}
 \newline\noindent {\em Software Language Engineering} {(\textbf{SLE})} \dates{2016}
@@ -569,20 +584,20 @@
 \bigskip
 \marginhead{Diversity \&\newline Outreach}
 
-\noindent {\bf Girls Code It: Intensive Pre-College Computer Science Program} \dates{Summer 2018}
-\newline\noindent Conceived of and am organizing large pre-college program aimed at \dates{Northeastern}
-\newline\noindent preparing high school-aged girls for a career in Computer Science. 
-\smallskip
-\newline\noindent 6 week-long residential program for 100 students which awards  
-\newline\noindent college credit and puts alumni of the program on an accelerated 
-\newline\noindent CS track upon matriculating at Northeastern University.
-\bigskip
+%\noindent {\bf Girls Code It: Intensive Pre-College Computer Science Program} \dates{Summer 2018}
+%\newline\noindent Conceived of and am organizing large pre-college program aimed at \dates{Northeastern}
+%\newline\noindent preparing high school-aged girls for a career in Computer Science.
+%\smallskip
+%\newline\noindent 6 week-long residential program for 100 students which awards
+%\newline\noindent college credit and puts alumni of the program on an accelerated
+%\newline\noindent CS track upon matriculating at Northeastern University.
+%\bigskip
 
 \noindent {\bf ScalaBridge Organizer}
 \newline\noindent Organizer of free full-day workshops on the weekends aimed at teaching women
 \newline\noindent and underrepresented minorities in computing how to think computationally and
-\newline\noindent how to program in Scala. 
-\smallskip 
+\newline\noindent how to program in Scala.
+\smallskip
 \newline\noindent {\em ScalaBridge Chapters: Basel (CH), Z\"{u}rich (CH), Copenhagen (DK), Boston (US).}
 \bigskip
 
@@ -639,16 +654,33 @@
 
 \bigskip
 
-\pagebreak
+%\pagebreak
 
 %% Talks
 \medskip
 \marginhead{Selected Talks}
 
 \vspace{-0.02in}
-\noindent{\bf What Happened to Distributed Programming} \dates{Strange Loop \& PWLConf 2017}\vspace{-0.03in}
-\newline\noindent {\bf  Languages?}\dates{{\bf \em (invited)}}
-\linebreak\noindent St. Louis, MO, USA. September 29, 2017
+\noindent{\bf Towards Language Support for Distributed Systems} \dates{Code Mesh 2018}\vspace{-0.03in}
+\linebreak\noindent London, UK. November 9, 2018 \dates{{\bf \em (invited)}}
+\bigskip
+
+\noindent{\bf What Happened to Distributed Programming Languages?} \dates{SPLASH-I 2018}\vspace{-0.03in}
+\newline\noindent {Boston, MA, USA. November 6, 2018} \dates{{\bf \em (invited)}}
+\bigskip
+
+\noindent{\bf Towards Language Support for Distributed Systems} \dates{Strange Loop 2018}\vspace{-0.03in}
+\linebreak\noindent St. Louis, MO, USA. September 27, 2018
+\bigskip
+
+\noindent{\bf I'm a Young Assistant Professor: AMA. + Heather's Unsolicited} \dates{PLMW 2018}\vspace{-0.03in}
+\newline\noindent {\bf  Advice About Grad School}\dates{{\bf \em (invited)}}
+\linebreak\noindent St. Louis, MO, USA. September 23, 2018
+\bigskip
+
+\noindent{\bf We're Building On Hollowed Foundations: Worrying Trends in} \dates{Lambda Days 2018}\vspace{-0.03in}
+\newline\noindent {\bf Open Source and What You Can Actually Do About It}\dates{{\bf \em (keynote)}}
+\linebreak\noindent Krakow, Poland. February 22, 2018
 \bigskip
 
 \noindent{\bf The Dramatic Consequences of the Open Source Revolution:}\dates{Devoxx 2017}\vspace{-0.03in}
@@ -730,6 +762,8 @@
 \noindent {\em I am also a frequent speaker in industry, at industrial conferences, developer ``meet-ups'', and everything in between. Some such events include:}
 \medskip
 \newline\noindent
+{\bf Scala Italy} (9/2018, Florence, Italy),
+{\bf LxScala} (6/2018, Lisbon, Portugal),
 {\bf Open Source Summit} (12/2017, Paris, France),
 {\bf Scala World} (9/2017, Lake District, UK),
 {\bf \href{https://youtu.be/17yy5BwIiTw}{LxScala}} (5/2017, Lisbon, Portugal),
@@ -792,7 +826,15 @@
 \marginhead{Students \newline Supervised}
 %\footnotetext[1]{At EPFL, research groups offer substantial projects for B.Sc./M.Sc. students to complete for credit. EPFL PhD students design and supervise these projects, as well as M.Sc. thesis projects.}
 
-\noindent {\bf Kevin Clancy}, {\em Eventual Consistency via Types} \dates{2016 --}
+\noindent {\bf Zeeshan Lakhani}, {\em TBD} \dates{2018 --}
+\newline\noindent PhD thesis \dates{Carnegie Mellon}
+\medskip
+
+\noindent {\bf Christopher Meiklejohn}, {\em TBD} \dates{2018 --}
+\newline\noindent PhD thesis \dates{Carnegie Mellon}
+\medskip
+
+\noindent {\bf Kevin Clancy}, {\em Eventual Consistency via Types} \dates{2017 --}
 \newline\noindent PhD thesis \dates{Northeastern}
 \medskip
 
@@ -863,7 +905,7 @@
 \newline\noindent {\em \'{E}cole Polytechnique F\'{e}d\'{e}rale de Lausanne}
 \newline\noindent \Telefon~+41 21 693 68 63
 \newline\noindent \Letter~\href{mailto:martin.odersky@epfl.ch}{martin.odersky@epfl.ch}
-\medskip	
+\medskip
 \end{minipage}
 &
 \begin{minipage}[t]{2.5in}
@@ -872,7 +914,7 @@
 \newline\noindent {\em Northeastern University}
 \newline\noindent \Telefon~+1-617-373-2085
 \newline\noindent \Letter~\href{mailto:matthias@ccs.neu.edu}{matthias@ccs.neu.edu}
-\medskip	
+\medskip
 \end{minipage}
 \\
 \\
@@ -882,7 +924,7 @@
 \newline\noindent {\em Northeastern University}
 \newline\noindent \Telefon~+1-617-749-8148
 \newline\noindent \Letter~\href{mailto:j.vitek@northeastern.edu}{j.vitek@northeastern.edu}
-\medskip	
+\medskip
 \end{minipage}
 &
 \begin{minipage}[t]{2.5in}
@@ -891,7 +933,7 @@
 \newline\noindent {\em Stanford University}
 \newline\noindent \Telefon~+1-510-610-0001
 \newline\noindent \Letter~\href{mailto:matei@cs.stanford.edu}{matei@cs.stanford.edu}
-\medskip	
+\medskip
 \end{minipage}
 \\
 \\
@@ -900,7 +942,7 @@
 %\newline\noindent {\em School of Computer Science and Communication}
 \newline\noindent {\em KTH Royal Institute of Technology}
 \newline\noindent \Telefon~+46 70 738 28 43
-\newline\noindent \Letter~\href{mailto:phaller@kth.se}{phaller@kth.se}	
+\newline\noindent \Letter~\href{mailto:phaller@kth.se}{phaller@kth.se}
 \end{minipage}
 
 \end{tabular}
